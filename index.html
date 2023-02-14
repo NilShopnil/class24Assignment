@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Jquery</title>
+</head>
+<body>
+    <div class="box"></div>
+
+    <a href="#" class="box1">Click here</a>
+    <p class="para1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, nostrum pariatur. Rem sapiente earum blanditiis laborum officiis repellat atque aliquam quam, veniam sint! Nobis, dolore.</p>
+
+    <a href="#" class="box2">Click here</a>
+    <p class="para2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, nostrum pariatur. Rem sapiente earum blanditiis laborum officiis repellat atque aliquam quam, veniam sint! Nobis, dolore. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum voluptas, facere placeat ut, ipsam veritatis, quas sequi minima in eligendi beatae ratione officia cum. Molestias?</p>
+    <br><br><br><br><br>
+
+    <button class="req">Add Friend</button>
+    <p class="array"></p>
+    
+    <script src="jquery-3.6.3.min.js"></script>
+    <script>
+        $('.box').click(function(){
+            $('.box').hide();
+        });
+
+        $('.box1').click(function(){
+            $('.para1').fadeToggle(1000);
+        });
+
+        $('.box2').click(function(){
+            $('.para2').css({
+                'background-color':'green',
+                'color':'blue',
+                'font-size':'30px'
+            });
+        });
+
+        $('.req').click(function(){
+            $('.req').css({
+                'background-color':'#242526',
+                'color':'white'
+            });
+            $('.req').text('Request Sent');
+        });
+
+        let myName = ['Md','Arif','Baktiar','Nil','Shopnil'];
+        $('.array').text(myName);
+        
+    </script>
+</body>
+</html>
